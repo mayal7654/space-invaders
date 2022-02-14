@@ -3,6 +3,7 @@ import java.awt.Image;
 
 public class Alien extends Characters2D{
 	public static int xSpeed = 0;
+	public static int framesDrawn=0;
 	private boolean isAlive;
 	
 	public Alien(Image i, Image i2) {
@@ -45,7 +46,6 @@ public class Alien extends Characters2D{
 	}
 	
 	public void paint(Graphics g) {
-		framesDrawn++;
 		if(framesDrawn%100<50) {
 			g.drawImage(myImage1, (int)x, (int)y, null);
 		}

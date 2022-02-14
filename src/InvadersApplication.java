@@ -111,6 +111,7 @@ public class InvadersApplication extends JFrame implements Runnable, KeyListener
 			g.drawString( "Wave "+(wave+1)+"    "+"Score: "+score, (WindowSize.width/2)-110, 60);
 			
 			//prints all alive aliens
+			Alien.framesDrawn++;
 			for (Alien alien : EnemyArray) {
 				if (alien.getisAlive() == true) {
 					alien.paint(g);
@@ -238,6 +239,7 @@ public class InvadersApplication extends JFrame implements Runnable, KeyListener
 		Alien.setAlienXSpeed(5);
 		setAlienPosition();
 		playerShip.setPosition((WindowSize.width/2)-25, WindowSize.height-80);
+		Alien.framesDrawn = 0;
 		score = 0;
 		wave = 0;
 		gameMenu = true;
